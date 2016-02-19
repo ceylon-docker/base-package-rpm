@@ -7,9 +7,9 @@ MAINTAINER Tako Schotanus <tako@ceylon-lang.org>
 
 USER root
 
-RUN dnf groupinstall -y "Development Tools" && \
-    dnf install -y sudo rpmdevtools rpm-sign docbook2X createrepo wget unzip && \
-    dnf clean all
+RUN yum groupinstall -y "Development Tools" && \
+    yum install -y sudo rpmdevtools rpm-sign docbook2X createrepo wget unzip && \
+    yum clean all
 
 RUN mkdir /output && chown ceylon:ceylon /output
 VOLUME /output
