@@ -11,7 +11,10 @@ RUN yum groupinstall -y "Development Tools" && \
     yum install -y sudo rpmdevtools rpm-sign docbook2X createrepo wget unzip && \
     yum clean all
 
-RUN mkdir /output && chown ceylon:ceylon /output
+RUN mkdir /output && \
+    touch /output/.novolume && \
+    chown -R ceylon:ceylon /output
+
 VOLUME /output
 
 USER ceylon
