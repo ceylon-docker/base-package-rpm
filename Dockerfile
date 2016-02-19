@@ -1,7 +1,7 @@
 #
 # Base Fedora image for dealing with RPM build tools and repositories
 #
-FROM base-redhat-ceylon:java7
+FROM ceylon/base-redhat-ceylon:java7
 
 MAINTAINER Tako Schotanus <tako@ceylon-lang.org>
 
